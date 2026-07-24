@@ -2,11 +2,30 @@
 <html>
   <head>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>My Page</title>
+    <title>Mishika's Corner</title>
   </head>
  <body class="bg-pink-50">
-  <h1 class="text-pink-600 text-4xl font-bold text-center uppercase tracking-wide">Mishika's Corner 🌸</h1>
+  <button onclick="document.body.classList.toggle('dark-mode')" class="fixed top-4 right-4 bg-gray-800 text-white py-3 px-1 rounded-full">🌙</button>
+  <h1 style="font-family: 'Pacifico', cursive;" class="text-pink-600 text-4xl font-bold text-center uppercase tracking-wide mt-6">Mishika's Corner 🌸</h1>
   <p class="text-gray-700 text-center text-lg mt-4 mx-auto max-w-xl">Hi, I'm Mishika! 💖 Welcome to my little corner of the internet 🌐 I'm an 17-year old self taught coder from India, learning Python and exploring the world of programming one project at a time. When I'm not coding, I'm figuring out new ideas to try next. 🌷</p>
   <img class="w-90 mx-auto mt-6 rounded-lg shadow-lg" src="https://i.pinimg.com/736x/e8/dd/e3/e8dde3a3943469101fdc7defac0591a9.jpg"/>
+  <div class="text-center mt-8">
+    <h2 class="text-2xl font-bold text-pink-600">Skills🚀</h2>
+    <div class="flex justify-center gap-3 mt-3 flex-wrap">
+      <span class="bg-pink-200 text-pink-800 py-4 px-2 rounded-full hover:bg-pink-400 hover:scale-110 transition duration-300">Python</span>
+      <span class="bg-pink-200 text-pink-800 py-4 px-2 rounded-full hover:bg-pink-400 hover:scale-110 transition duration-300">HTML</span>
+      <span class="bg-pink-200 text-pink-800 py-4 px-2 rounded-full hover:bg-pink-400 hover:scale-110 transition duration-300">Tailwind CSS</span>
+    </div>
+  </div>
+  <div class="text-center mt-8">
+    <h2 class="text-2xl font-bold text-pink-600">Find Me</h2>
+    <div class="flex justify-center gap-4 mt-3">
+      <a href="https://github.com/mishika074" class="text-gray-700 hover:text-pink-600 underline">GitHub</a>    
+    </div>
+  </div>
+  <style>
+    .dark-mode {background-color: "1a1a1a"!important; color:white!important;}
+    .dark-mode h1, .dark-mode h2, .dark-mode p {color:white!important;}
+  </style>
 </body>
 </html>
