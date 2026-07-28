@@ -6,7 +6,7 @@
   </head>
  <body class="bg-pink-50">
   <button onclick="document.body.classList.toggle('dark-mode')" class="fixed top-4 right-4 bg-gray-800 text-white py-3 px-1 rounded-full">🌙</button>
-  <h1 style="font-family: 'Pacifico', cursive;" class="text-pink-600 text-4xl font-bold text-center uppercase tracking-wide mt-6">Mishika's Corner 🌸</h1>
+  <h1 style="font-family: 'Pacifico', cursive;" class="text-pink-600 text-4xl font-bold text-center uppercase tracking-wide mt-6"><h1 id="typingHeading"style="font-family: 'Pacifico', cursive;"class="text-pink-600 text-4xl font-bold text-center uppercase tracking-wide mt-6">Mishika's Corner 🌸</h1></h1>
   <p class="text-gray-700 text-center text-lg mt-4 mx-auto max-w-xl">Hi, I'm Mishika! 💖 Welcome to my little corner of the internet 🌐 I'm an 17-year old self taught coder from India, learning Python and exploring the world of programming one project at a time. When I'm not coding, I'm figuring out new ideas to try next. 🌷</p>
   <img class="w-90 mx-auto mt-6 rounded-lg shadow-lg" src="https://i.pinimg.com/originals/89/56/8b/89568bac80d8850255ee711c26897ba2.jpg"/>
   <div class="text-center mt-8">
@@ -18,17 +18,58 @@
     </div>
   </div>
   <div class="text-center mt-8">
+    <h2 class="text-2xl font-bold text-pink-600">currently building💻</h2>
+    <p class="text-gray-700 mt-2">I'm currently working on a galaxy shooter game using JavaScript and HTML Canvas. These projects help me enhance my coding skills and explore new technologies. Stay tuned for updates! 🌟</p>
+  </div>
+  <div class="text-center mt-8">
     <h2 class="text-2xl font-bold text-pink-600">Find Me</h2>
     <div class="flex justify-center gap-4 mt-3">
       <a href="https://github.com/mishika074" class="text-gray-700 hover:text-pink-600 underline">GitHub</a>    
+      <a href="mailto:mishika074@gmail.com" class="text-gray-700 hover:text-pink-600 underline">Email</a>
     </div>
   </div>
   <style>
+    @keyframes fadeIn {
+      from {opacity: 0;transform: translateY(-20px);}
+      to {opacity: 1;transform: translateY(0);}
+    }
+    h1, p, img{animation: fadeIn 1s ease-in-out;
+    }
     .dark-mode {background-color: "1a1a1a"!important; color:white!important;}
     .dark-mode h1, .dark-mode h2, .dark-mode p {color:white!important;}
   </style>
   <footer class="bg-pink-100 text-center py-4 mt-8">
    Made with ❤️ by Mishika 
   </footer>
+  <script>
+    const text = "Mishika's Corner 🌸";
+    let index = 0;
+    const headingElement = document.getElementById("typingHeading");
+
+    function typeEffect() {
+      if (index < text.length) {
+        headingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    typeEffect();
+
+    document.addEventListener("mousemove",function(e){
+      const emoji = document.createElement("div");
+      emoji.innerHTML = "🌸";
+      emoji.style.position="fixed";
+      emoji.style.left=e.clientX+"px";
+      emoji.style.top=e.clientY+"px";
+      emoji.style.pointerEvents="none";
+      emoji.style.fontSize="20px";
+      document.body.appendChild(emoji);
+
+      setTimeout(function(){
+        emoji.remove();
+      },800);
+    });
+  </script>
 </body>
 </html>
